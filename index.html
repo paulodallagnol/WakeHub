@@ -40,7 +40,7 @@ body{
     transition:background-image .4s ease;
 
     background-image:
-        linear-gradient(180deg, rgba(10,40,80,.55), rgba(10,40,80,.75)),
+        linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)),
         url("background.jpg");
     background-size:cover;
     background-position:center;
@@ -344,7 +344,7 @@ const logoImg = document.getElementById("logoImg");
 function aplicarFundo(base64)
 {
     document.body.style.backgroundImage =
-        `linear-gradient(180deg, rgba(10,40,80,.55), rgba(10,40,80,.75)), url("${base64}")`;
+        `linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)), url("${base64}")`;
     extrairCorDominante(base64);
 }
 
@@ -392,7 +392,7 @@ function extrairCorDominante(base64)
             // Escurece um pouco a média pra manter bom contraste com o texto branco
             r = Math.round(r * 0.55);
             g = Math.round(g * 0.55);
-            b = Math.round(b * 0.65);
+            b = Math.round(b * 0.55);
 
             document.documentElement.style.setProperty("--accent-r", r);
             document.documentElement.style.setProperty("--accent-g", g);
